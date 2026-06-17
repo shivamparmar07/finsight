@@ -1,7 +1,6 @@
 # 🏦 FinSight AI: Bank Statement Intelligence Platform
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![AG2](https://img.shields.io/badge/Agent_Framework-AG2-green)](https://github.com/ag2ai/ag2)
 
 **Automated extraction, structuring, RAG-powered querying, and AI-agent financial analysis of bank statement PDFs.**
@@ -17,10 +16,16 @@ This project converts unstructured bank statement PDFs into structured data usin
 - **Autonomous AI Agents** — Built with **AG2** (migrated from pyautogen in Feb 2026)
 - **Financial Intelligence** — Income/expense categorization, trend analysis, monthly & yearly summaries
 - **Multimodal & Local LLM Support** — Works with Gemini, Ollama (Llama 3, Gemma 2, etc.)
-- **User Interface** — Streamlit web application (`apps.py`)
+- **User Interface** — Streamlit web application (`app.py`)
 - **Evaluation Framework** — DeepEval integration for RAG quality testing
 
 ---
+## ✨ UI Showcase
+<img width="1868" height="935" alt="Opera Snapshot_2026-06-18_033226_localhost" src="https://github.com/user-attachments/assets/cbb9ecae-7d41-4fc5-850e-18753b89aea6" />
+<img width="1868" height="935" alt="Opera Snapshot_2026-06-18_034253_localhost" src="https://github.com/user-attachments/assets/8e2648df-9799-4c90-a9d8-d1addc769ecc" />
+<img width="1868" height="935" alt="Opera Snapshot_2026-06-18_034241_localhost" src="https://github.com/user-attachments/assets/b6af763c-2f2f-4e37-9f63-5dc5148d1b20" />
+<img width="1864" height="497" alt="Opera Snapshot_2026-06-18_034332_localhost" src="https://github.com/user-attachments/assets/2337b005-bca4-48f5-b70f-969d87ddd078" />
+
 
 ## 🛠 Technology Stack
 
@@ -31,11 +36,10 @@ This project converts unstructured bank statement PDFs into structured data usin
 - **Frontend**: Streamlit
 - **Analysis**: pandas, Plotly
 
-
 ---
 
 ## 📁 Repository Structure
-```
+```text
 AI-Bank-Statement-Document-Automation/
 ├── backend/
 │   ├── app/
@@ -82,7 +86,6 @@ AI-Bank-Statement-Document-Automation/
 └── pyproject.toml
 ```
 
-
 ---
 
 ## 🚀 Quick Start
@@ -94,31 +97,33 @@ git clone https://github.com/shivamparmar07/finsight.git
 cd finsight
 
 # Setup virtual environment and install dependencies
-./src/build-python-virual-environment.sh
-./src/activate_virual_environment.sh
-./src/install-requirement.sh
+./scripts/build-python-virual-environment.sh
+./scripts/activate_virual_environment.sh
+./scripts/install-requirement.sh
 
 # Install Tesseract OCR (Ubuntu/Debian)
-./src/install-pytesseract-for-linux.sh
+./scripts/install-pytesseract-for-linux.sh
 ```
 
-## Create a .env file and add your GOOGLE_API_KEY (for Gemini).
+> **Note:** Create a `.env` file in the root directory and add your `GOOGLE_API_KEY` (for Gemini).
 
 ### 2. Run the Application
-#### Development Notebooks
-
-```bash
-cd src/dev
-jupyter notebook
-```
 
 #### Streamlit Web UI
 
 ```bash
-cd src
-streamlit run apps.py
+cd frontend/streamlit_app
+streamlit run app.py
 ```
 
+#### Development Notebooks
+
+```bash
+cd notebooks
+jupyter notebook
+```
+
+---
 
 ## 🗺 Roadmap
 
@@ -130,11 +135,5 @@ streamlit run apps.py
 
 ------------------------------------------------------------------------
 
-## 📄 License
-### This project is licensed under the Apache License 2.0.
-
--------------------------------------------------------------------------
-
 #### ⭐ Star this repo if you find it useful!
-
-
+```
